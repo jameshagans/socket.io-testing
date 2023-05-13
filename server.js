@@ -25,7 +25,8 @@ io.on('connection', (socket) => {
 
   socket.on('chat message', (data) => {
     console.log('Received message:', data);
-    io.emit('chat message', data); // Broadcast the message to all connected clients
+    io.emit('chat message', data); // Broadcast the message to all connected clientss
+    io.broadcast.emit('chat message', data); // Broadcast the message to only the other connected clients 
   });
 
 
