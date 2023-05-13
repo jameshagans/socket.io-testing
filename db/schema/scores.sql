@@ -1,0 +1,7 @@
+DROP TABLE IF EXISTS users CASCADE;
+
+CREATE TABLE scores (
+  id SERIAL PRIMARY KEY,
+  player_id INTEGER FOREIGN KEY REF players.id,
+  score INT
+);
